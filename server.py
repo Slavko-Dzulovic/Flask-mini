@@ -1,6 +1,9 @@
+from datetime import datetime
 import os
+import random
 
-from app import createApp
+from app import createApp, db
+from models import Measurement
 
 if os.environ['FLASK_ENV_TYPE'] == 'Development':
     from config.development import Development as Config
