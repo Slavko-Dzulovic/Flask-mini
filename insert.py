@@ -1,6 +1,6 @@
 import random
-from app import createApp, db
-from models import Measurement
+from flask_app.__init__ import db
+from flask_app.measurements.models import Measurement
 from server import app
 
 
