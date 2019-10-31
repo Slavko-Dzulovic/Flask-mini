@@ -2,6 +2,8 @@ import os
 
 from flask_app.__init__ import createApp
 
+os.environ['FLASK_ENV_TYPE'] = 'Development'
+
 if os.environ['FLASK_ENV_TYPE'] == 'Development':
     from config.development import Development as Config
 elif os.environ['FLASK_ENV_TYPE'] == 'Production':
@@ -11,6 +13,7 @@ else:
 
 
 app = createApp(Config)
+
 
 
 @app.route('/')
