@@ -1,4 +1,5 @@
 import os
+from flask_app import db
 
 from flask_app.__init__ import createApp
 
@@ -18,4 +19,5 @@ app = createApp(Config)
 
 @app.route('/')
 def hello():
+    db.create_all()
     return "Hello :D"
