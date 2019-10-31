@@ -19,5 +19,5 @@ app = createApp(Config)
 
 @app.route('/')
 def hello():
-    db.create_all()
+    # db.create_all()
     return "Hello :D"
